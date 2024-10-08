@@ -1,0 +1,7 @@
+CREATE TABLE Products (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Name VARCHAR(100) NOT NULL,
+    Price DECIMAL(10, 2) NOT NULL
+);
+ALTER TABLE Products
+ADD category_id INT FOREIGN KEY REFERENCES Categories(Id);
