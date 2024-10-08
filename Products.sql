@@ -3,3 +3,5 @@ CREATE TABLE Products (
     Name VARCHAR(100) NOT NULL,
     Price DECIMAL(10, 2) NOT NULL
 );
+ALTER TABLE Products
+ADD category_id INT FOREIGN KEY REFERENCES Categories(Id);
